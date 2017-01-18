@@ -14,7 +14,7 @@ namespace ModelingYourLife
     {
         private int stam;
         public string runnerName;
-        public State current = State.Standing;
+        public State currentState = State.Standing;
 
         public RunningMan(string _runnerName)
         {
@@ -23,16 +23,20 @@ namespace ModelingYourLife
         }
         public void ReduceStam()
         {
-            if (stam <= 0)
+            if (stam <= 1)
             {
                 Console.WriteLine($"{ runnerName} Is Down for the count");
                 stam = 0;
-                current = State.Fallen;
+                currentState = State.Fallen;
             }
             else
             {
                 stam -= 1;
             }
+        }
+        public override string ToString()
+        {
+            return $"{runnerName} : {stam}";
         }
     }
 }
