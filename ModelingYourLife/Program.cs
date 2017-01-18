@@ -10,6 +10,15 @@ namespace ModelingYourLife
     {
         static void Main(string[] args)
         {
+            Objects rndObject = new Objects("Mystery object");
+            Console.WriteLine(rndObject);
+            string randomObject = rndObject.ToString();
+            string ladder = "ladder";
+            string bridge = "bridge";
+            if (randomObject == (ladder ( bridge));
+            {
+
+            }
         }
     }
 }
