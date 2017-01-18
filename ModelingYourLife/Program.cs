@@ -16,13 +16,12 @@ namespace ModelingYourLife
                 Console.WriteLine("Enter Your Running Man Name");
                 string playerName = Console.ReadLine();
                 Console.Clear();
+
                 Console.WriteLine("");
                 Console.WriteLine($"Welcome {playerName} to Running Man! To Play Type Jump or Duck Into The Console.");
                 Console.WriteLine("You Are Trying To Jump Over Or Duck Under Obsticals Before You See Them.");
                 Console.WriteLine("Your Charater has 3 Stamina If You Trip Too Many Times He Falls.");
                 Console.WriteLine("");
-
-                
 
                 RunningMan runner = new RunningMan(playerName);
                 //Console.WriteLine(rndObject);
@@ -39,17 +38,14 @@ namespace ModelingYourLife
                         Console.WriteLine("Do You Want To Jump Or Duck?");
                         string jumpDuckSelect = Console.ReadLine();
                         Console.Clear();
-
                         if (jumpDuckSelect == duck.ToLower())
                         {
                             Console.WriteLine($"A Sucsessfull Jump {runner} Stamina Remaining");
-
                         }
                         else
                         {
                             runner.ReduceStam();
                             Console.WriteLine($"{runner} Stamina: You Tripped, -1 to Stamina");
-
                         }
                     }
                     else
@@ -60,13 +56,11 @@ namespace ModelingYourLife
                         if (jumpDuckSelect == jump.ToLower())
                         {
                             Console.WriteLine($"A Sucsessfull Jump {runner} Stamina Remaining");
-
                         }
                         else
                         {
                             runner.ReduceStam();
                             Console.WriteLine($"{runner} Stamina: You Tripped, -1 To Stamina");
-
                         }
                     }
                     turns--;
